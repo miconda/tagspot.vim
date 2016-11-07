@@ -1,0 +1,58 @@
+*tagspot.txt*	Locate the tag nearby
+
+==============================================================================
+CONTENTS                                          *tagspot* *tagspot-contents*
+
+    Installation...........................: |tagspot-installation|
+    Usage..................................: |tagspot-usage|
+    Issues.................................: |tagspot-issues|
+
+
+==============================================================================
+INSTALLATION                                            *tagspot-installation*
+
+There are several ways to install the plugin. The recommended one is by using
+Tim Pope's pathogen (http://www.vim.org/scripts/script.php?script_id=2332). In
+that case, you can clone the plugin's git repository like so:
+>
+    git clone git://github.com/miconda/tagspot.vim ~/.vim/bundle/tagspot
+<
+If your vim configuration is under git version control, you could also set up
+the repository as a submodule, which would allow you to update more easily.
+The command is (provided you're in ~/.vim):
+>
+    git submodule add git://github.com/miconda/tagspot.vim bundle/tagspot
+<
+Another way is to simply copy all the essential directories inside the ~/.vim
+directory: autoload, doc, plugin.
+
+
+==============================================================================
+USAGE                                                          *tagspot-usage*
+
+The purpose of this plugin is to enable searching tags nearby the location of
+current edited file. To search, it uses the word under current cursor.
+
+It's very similar to the built-in |:tag| command, but with next tag location
+rules (by priority):
+
+- current file
+- current directory
+- elsewhere
+
+One way to use this plugin is to set a combination of keys to map the call of
+TagSpot() function. For example -- to jump to the tag corresponding to the word
+under the cursor by pressing CTRL+[ -- add to .vimrc:
+
+>
+    nnoremap <C-[> :call SpotTag()<CR>
+    vnoremap <C-[> :call SpotTag()<CR>
+<
+
+==============================================================================
+ISSUES                                                        *tagspot-issues*
+
+Any issues and suggestions are very welcome on the github bugtracker:
+
+- https://github.com/miconda/tagspot.vim/issues
+
