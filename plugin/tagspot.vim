@@ -114,7 +114,7 @@ function! tagspot#SpotNearbyTag()
 endfunction
 
 " wrapper function to map from .vimrc
-function! SpotTag()
+function! TagSpot()
 	return tagspot#SpotNearbyTag()
 endfunction
 

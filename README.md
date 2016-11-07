@@ -54,8 +54,8 @@ TagSpot() function. For example -- to jump to the tag corresponding to the word
 under the cursor by pressing CTRL+[ -- add to .vimrc:
 
 ``` vim
-    nnoremap <C-[> :call SpotTag()<CR>
-    vnoremap <C-[> :call SpotTag()<CR>
+    nnoremap <C-[> :call TagSpot()<CR>
+    vnoremap <C-[> :call TagSpot()<CR>
 ```
 
 ## Remarks ##
