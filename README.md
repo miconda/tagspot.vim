@@ -7,7 +7,7 @@ Spot the tag nearby.
 The purpose of this plugin is to enable searching tags nearby the location of
 current edited file. To search, it uses the word under current cursor.
 
-It is very similar to the built-in |:tag| command, but with next tag location
+It is very similar to the built-in **:tag** command, but with next tag location
 rules (by priority):
 
   * in the same file
@@ -15,8 +15,16 @@ rules (by priority):
   * elsewhere
 
 This plugin was developed because (apparently) the default tag selection is
-putting priority only to same file, then it will select likely based on the
+putting priority only to the same file, then it will select likely based on the
 order in the tags file.
+
+Example of behaviour:
+
+  * a function named **x()** is defined in **modules/a/a.c**
+  * another function named **x()** is defined in **modules/b/b.c**
+  * a function **x()** is used in **modules/b/c.c** and triggering a tag select
+  for it with vim default function is jumping to **modules/a/a.c**. With
+  **tagspot**, it is jumping to **modules/b/b.c** .
 
 ## Installation ##
 
